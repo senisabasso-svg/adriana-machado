@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adriana Machado | Colorista &amp; Master Internacional — Salto, Uruguay</title>
+<meta name="description" content="Salón de belleza y curso de estilismo dirigido por Adriana Machado, Master Internacional en colorimetría, en Salto, Uruguay.">
+<meta property="og:title" content="Adriana Machado | Colorista &amp; Master Internacional">
+<meta property="og:description" content="37 años transformando cabellos en Salto. Colorimetría, cortes, tratamientos e instituto de formación.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/hero.jpg">
+<link rel="icon" href="assets/logo.jpg" type="image/jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1c1014;
+    --ink-soft:#3a242c;
+    --pearl:#f6f1ec;
+    --pearl-2:#efe6de;
+    --wine:#6e2a42;
+    --wine-deep:#4a1a2c;
+    --rose:#a85a72;
+    --champagne:#c4a574;
+    --champagne-soft:#e8d5b5;
+    --muted:#7a6570;
+    --muted-light:#d8c8c0;
+    --line:rgba(28,16,20,.1);
+    --white:#fffefb;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Figtree',sans-serif;
+    background:var(--pearl);
+    color:var(--ink);
+    line-height:1.65;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.serif{font-family:'Cormorant Garamond',serif;}
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:1180px; margin:0 auto; padding:0 24px;}
+  @media(min-width:900px){.wrap{padding:0 40px;}}
+
+  .eyebrow{
+    text-transform:uppercase; letter-spacing:.24em; font-size:11px; font-weight:600;
+    color:var(--wine); margin-bottom:16px; display:inline-block;
+  }
+  .btn{
+    display:inline-flex; align-items:center; gap:10px; padding:15px 28px;
+    font-weight:600; font-size:14px; letter-spacing:.03em; transition:transform .3s ease, background .3s ease, color .3s ease, border-color .3s ease;
+    border:1px solid transparent; cursor:pointer; border-radius:2px;
+  }
+  .btn-primary{background:var(--wine); color:var(--pearl);}
+  .btn-primary:hover{background:var(--wine-deep); transform:translateY(-2px);}
+  .btn-ghost{border-color:rgba(28,16,20,.28); color:var(--ink);}
+  .btn-ghost:hover{border-color:var(--wine); color:var(--wine);}
+  .hero .btn-ghost{border-color:rgba(246,241,236,.45); color:var(--pearl);}
+  .hero .btn-ghost:hover{border-color:var(--champagne-soft); background:rgba(255,255,255,.08);}
+
+  /* NAV */
+  header{
+    position:fixed; top:0; left:0; right:0; z-index:100; color:var(--pearl);
+    transition:background .35s ease, backdrop-filter .35s ease, color .35s ease, box-shadow .35s ease;
+  }
+  header.scrolled{
+    background:rgba(246,241,236,.92); backdrop-filter:blur(16px);
+    color:var(--ink); box-shadow:0 1px 0 var(--line);
+  }
+  nav{display:flex; align-items:center; justify-content:space-between; padding:18px 24px; max-width:1180px; margin:0 auto;}
+  @media(min-width:900px){nav{padding:20px 40px;}}
+  .brand{display:flex; align-items:center; gap:12px; font-family:'Cormorant Garamond',serif; font-weight:600; font-size:22px; letter-spacing:.01em;}
+  .brand img{width:38px; height:38px; border-radius:50%; object-fit:cover; border:1px solid var(--champagne-soft);}
+  header.scrolled .brand img{border-color:var(--wine);}
+  .navlinks{display:none; gap:32px; font-size:13.5px; font-weight:500;}
+  @media(min-width:900px){.navlinks{display:flex;}}
+  .navlinks a{opacity:.82; position:relative; padding:4px 0;}
+  .navlinks a:hover{opacity:1;}
+  .navlinks a::after{
+    content:''; position:absolute; left:0; bottom:-3px; width:0; height:1px;
+    background:var(--champagne); transition:width .28s ease;
+  }
+  header.scrolled .navlinks a::after{background:var(--wine);}
+  .navlinks a:hover::after{width:100%;}
+  .nav-cta{display:none; padding:11px 20px; font-size:13px;}
+  @media(min-width:900px){.nav-cta{display:inline-flex;}}
+  .burger{display:flex; flex-direction:column; gap:5px; cursor:pointer; padding:6px; background:none; border:0; color:inherit;}
+  @media(min-width:900px){.burger{display:none;}}
+  .burger span{width:22px; height:1.5px; background:currentColor; display:block; transition:transform .25s ease, opacity .25s ease;}
+  .burger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+  .burger.open span:nth-child(2){opacity:0;}
+  .burger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+  .mobile-menu{
+    display:none; flex-direction:column; gap:0;
+    background:rgba(246,241,236,.98); border-top:1px solid var(--line); color:var(--ink);
+  }
+  .mobile-menu.open{display:flex;}
+  .mobile-menu a{padding:16px 24px; border-bottom:1px solid var(--line); font-size:15px;}
+  .mobile-menu a.cta{color:var(--wine); font-weight:600;}
+
+  /* HERO */
+  .hero{
+    position:relative; min-height:100svh; display:flex; align-items:flex-end;
+    overflow:hidden; color:var(--pearl);
+  }
+  .hero-bg{
+    position:absolute; inset:0; z-index:0;
+    background:var(--ink) url('assets/hero.jpg') center 28%/cover no-repeat;
+    transform:scale(1.06); animation:heroZoom 18s ease-out forwards;
+  }
+  .hero-bg::after{
+    content:''; position:absolute; inset:0;
+    background:
+      linear-gradient(105deg, rgba(28,16,20,.72) 0%, rgba(28,16,20,.35) 48%, rgba(28,16,20,.18) 100%),
+      linear-gradient(180deg, rgba(28,16,20,.25) 0%, transparent 35%, rgba(28,16,20,.75) 100%);
+  }
+  @keyframes heroZoom{from{transform:scale(1.06);} to{transform:scale(1);}}
+  .hero-inner{
+    position:relative; z-index:2; width:100%;
+    padding:120px 0 72px;
+  }
+  .hero .eyebrow{color:var(--champagne-soft); margin-bottom:18px;}
+  .hero h1{
+    font-size:clamp(52px,9vw,96px); font-weight:500; line-height:.95;
+    letter-spacing:-.02em; margin-bottom:18px; max-width:10ch;
+  }
+  .hero h1 em{font-style:italic; color:var(--champagne-soft);}
+  .hero .tagline{
+    max-width:420px; font-size:clamp(15px,1.6vw,17px); font-weight:400;
+    color:var(--muted-light); margin-bottom:36px; line-height:1.55;
+  }
+  .hero-ctas{display:flex; flex-wrap:wrap; gap:14px;}
+  .scroll-cue{
+    position:absolute; bottom:28px; right:24px; z-index:2;
+    font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--muted-light);
+    writing-mode:vertical-rl; transform:rotate(180deg);
+  }
+  @media(min-width:900px){.scroll-cue{right:40px; bottom:40px;}}
+
+  /* REVEAL */
+  .reveal{
+    opacity:0; transform:translateY(28px);
+    transition:opacity .8s ease, transform .8s ease;
+  }
+  .reveal.visible{opacity:1; transform:none;}
+  .reveal-delay-1{transition-delay:.12s;}
+  .reveal-delay-2{transition-delay:.24s;}
+  .reveal-delay-3{transition-delay:.36s;}
+
+  section{padding:100px 0;}
+  @media(min-width:900px){section{padding:120px 0;}}
+  .section-head{max-width:560px; margin-bottom:48px;}
+  .section-head h2{font-size:clamp(32px,4.2vw,48px); font-weight:500; line-height:1.12; letter-spacing:-.01em;}
+  .section-head p{color:var(--muted); font-size:16px; margin-top:16px;}
+  .center{text-align:center; margin-left:auto; margin-right:auto;}
+
+  /* ABOUT */
+  .about{
+    background:
+      radial-gradient(ellipse 80% 50% at 100% 0%, rgba(196,165,116,.12), transparent 55%),
+      var(--pearl);
+  }
+  .about-grid{display:grid; grid-template-columns:1fr; gap:40px; align-items:center;}
+  @media(min-width:900px){.about-grid{grid-template-columns:.9fr 1.1fr; gap:72px;}}
+  .about-photo{
+    position:relative; overflow:hidden; aspect-ratio:4/5;
+  }
+  .about-photo img{width:100%; height:100%; object-fit:cover;}
+  .about-photo::before{
+    content:''; position:absolute; inset:18px; border:1px solid rgba(246,241,236,.35); z-index:1; pointer-events:none;
+  }
+  .about-text h2{font-size:clamp(30px,3.8vw,44px); font-weight:500; margin-bottom:22px; line-height:1.15;}
+  .about-text p{color:var(--muted); font-size:16px; margin-bottom:18px;}
+  .about-text p strong{color:var(--ink); font-weight:600;}
+  .stats{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:36px;}
+  .stat{border-top:1px solid var(--line); padding-top:14px;}
+  .stat .num{font-family:'Cormorant Garamond',serif; font-size:32px; color:var(--wine); font-weight:600; line-height:1;}
+  .stat .lbl{font-size:12px; color:var(--muted); letter-spacing:.04em; margin-top:6px;}
+
+  /* SERVICES */
+  .services{
+    background:
+      linear-gradient(180deg, var(--pearl-2), #e8ddd4);
+  }
+  .svc-grid{display:grid; grid-template-columns:1fr; gap:16px;}
+  @media(min-width:680px){.svc-grid{grid-template-columns:1fr 1fr;}}
+  @media(min-width:1024px){.svc-grid{grid-template-columns:repeat(3,1fr); gap:18px;}}
+  .svc-item{
+    position:relative; overflow:hidden; aspect-ratio:3/3.7; background:var(--ink);
+  }
+  .svc-item img{
+    width:100%; height:100%; object-fit:cover; opacity:.72;
+    transition:transform .7s ease, opacity .4s ease;
+  }
+  .svc-item:hover img{transform:scale(1.05); opacity:.5;}
+  .svc-copy{
+    position:absolute; inset:0;
+    background:linear-gradient(180deg, transparent 28%, rgba(28,16,20,.55) 65%, rgba(28,16,20,.92) 100%);
+    display:flex; flex-direction:column; justify-content:flex-end; padding:28px;
+  }
+  .svc-num{
+    font-family:'Cormorant Garamond',serif; color:var(--champagne);
+    font-size:14px; letter-spacing:.18em; margin-bottom:10px;
+  }
+  .svc-item h3{font-size:24px; font-weight:500; margin-bottom:10px; color:var(--pearl);}
+  .svc-item p{font-size:13.5px; color:var(--muted-light); max-width:280px; line-height:1.5;}
+
+  /* INSTITUTO */
+  .instituto{background:var(--pearl); position:relative;}
+  .instituto-panel{
+    display:grid; grid-template-columns:1fr; overflow:hidden;
+    background:
+      linear-gradient(135deg, #4a1a2c 0%, #6e2a42 55%, #8a3d58 100%);
+    color:var(--pearl); min-height:420px;
+  }
+  @media(min-width:900px){.instituto-panel{grid-template-columns:1.05fr .95fr;}}
+  .instituto-copy{padding:48px 32px; display:flex; flex-direction:column; justify-content:center;}
+  @media(min-width:900px){.instituto-copy{padding:64px 56px;}}
+  .instituto-copy .eyebrow{color:var(--champagne-soft);}
+  .instituto-copy h2{font-size:clamp(30px,3.8vw,42px); font-weight:500; margin-bottom:18px; line-height:1.15;}
+  .instituto-copy p{color:rgba(246,241,236,.78); margin-bottom:28px; max-width:420px;}
+  .instituto .btn-primary{background:var(--champagne); color:var(--ink);}
+  .instituto .btn-primary:hover{background:var(--champagne-soft);}
+  .instituto-photo{position:relative; min-height:280px;}
+  .instituto-photo img{width:100%; height:100%; object-fit:cover; position:absolute; inset:0;}
+  .instituto-photo::after{
+    content:''; position:absolute; inset:0;
+    background:linear-gradient(90deg, rgba(74,26,44,.55) 0%, transparent 40%);
+  }
+  @media(max-width:899px){
+    .instituto-photo::after{background:linear-gradient(180deg, rgba(74,26,44,.65) 0%, transparent 35%);}
+  }
+
+  /* WHY */
+  .why{
+    background:
+      radial-gradient(ellipse 60% 40% at 0% 100%, rgba(110,42,66,.08), transparent 50%),
+      var(--pearl);
+  }
+  .why-list{display:grid; grid-template-columns:1fr; gap:0;}
+  @media(min-width:800px){.why-list{grid-template-columns:repeat(3,1fr);}}
+  .why-item{
+    padding:32px 0; border-top:1px solid var(--line);
+  }
+  @media(min-width:800px){
+    .why-item{padding:8px 36px 8px 0; border-top:0; border-right:1px solid var(--line);}
+    .why-item:last-child{border-right:0; padding-right:0;}
+    .why-item:not(:first-child){padding-left:36px;}
+  }
+  .why-item .mark{
+    font-family:'Cormorant Garamond',serif; font-style:italic;
+    font-size:28px; color:var(--champagne); margin-bottom:14px; display:block;
+  }
+  .why-item h3{font-size:22px; font-weight:500; margin-bottom:10px;}
+  .why-item p{font-size:14.5px; color:var(--muted); max-width:280px;}
+
+  /* GALLERY */
+  .gallery{background:var(--pearl-2);}
+  .gal-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:12px;}
+  @media(min-width:700px){.gal-grid{grid-template-columns:repeat(3,1fr); gap:14px;}}
+  .gal-item{overflow:hidden; aspect-ratio:1/1.2; position:relative;}
+  .gal-item img{width:100%; height:100%; object-fit:cover; transition:transform .7s ease;}
+  .gal-item:hover img{transform:scale(1.06);}
+  .gal-item:nth-child(2),
+  .gal-item:nth-child(5){aspect-ratio:1/1.35;}
+  @media(max-width:699px){
+    .gal-item:nth-child(2),
+    .gal-item:nth-child(5){aspect-ratio:1/1.2;}
+  }
+
+  .community{
+    margin-top:56px; display:flex; flex-wrap:wrap; align-items:flex-end;
+    justify-content:space-between; gap:28px; border-top:1px solid var(--line); padding-top:40px;
+  }
+  .community-stats{display:flex; flex-wrap:wrap; gap:36px;}
+  .community-stats .num{font-family:'Cormorant Garamond',serif; font-size:30px; color:var(--wine); font-weight:600;}
+  .community-stats .lbl{font-size:12px; color:var(--muted);}
+
+  /* CONTACT */
+  .contact{
+    position:relative; overflow:hidden;
+    padding:120px 0 100px;
+    background:var(--ink);
+    color:var(--pearl);
+  }
+  .contact-bg{
+    position:absolute; inset:0; z-index:0;
+    background:url('assets/contacto.jpg') center 30%/cover no-repeat;
+    opacity:.28; filter:grayscale(.15);
+  }
+  .contact-bg::after{
+    content:''; position:absolute; inset:0;
+    background:linear-gradient(105deg, rgba(28,16,20,.92) 0%, rgba(28,16,20,.75) 55%, rgba(28,16,20,.55) 100%);
+  }
+  .contact-inner{position:relative; z-index:1; max-width:560px;}
+  .contact .eyebrow{color:var(--champagne-soft);}
+  .contact h2{font-size:clamp(36px,5vw,56px); font-weight:500; margin-bottom:18px; line-height:1.05;}
+  .contact p{color:var(--muted-light); margin-bottom:32px; font-size:16px;}
+  .contact .btn-primary{background:var(--champagne); color:var(--ink);}
+  .contact .btn-primary:hover{background:var(--champagne-soft);}
+  .contact .btn-ghost{border-color:rgba(246,241,236,.35); color:var(--pearl);}
+  .contact .btn-ghost:hover{border-color:var(--champagne-soft); background:rgba(255,255,255,.06);}
+  .contact-ctas{display:flex; flex-wrap:wrap; gap:14px; margin-bottom:48px;}
+  .contact-details{display:grid; grid-template-columns:1fr; gap:20px;}
+  @media(min-width:640px){.contact-details{grid-template-columns:1fr 1fr;}}
+  .cdetail{border-top:1px solid rgba(246,241,236,.18); padding-top:12px;}
+  .cdetail .lbl{font-size:11px; text-transform:uppercase; letter-spacing:.16em; color:var(--champagne); margin-bottom:6px;}
+  .cdetail .val{font-size:15px; color:var(--pearl);}
+  .cdetail a:hover{color:var(--champagne-soft);}
+
+  footer{
+    background:var(--ink); border-top:1px solid rgba(246,241,236,.1);
+    padding:28px 0; color:var(--muted-light);
+  }
+  .foot-inner{
+    display:flex; flex-wrap:wrap; gap:16px; align-items:center;
+    justify-content:space-between; font-size:13px;
+  }
+  .foot-inner a{color:var(--muted-light);}
+  .foot-inner a:hover{color:var(--champagne-soft);}
+  .foot-links{display:flex; gap:18px;}
+
+  .float-cta{
+    position:fixed; bottom:22px; right:22px; z-index:200;
+    background:var(--wine); color:var(--pearl);
+    width:56px; height:56px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+    box-shadow:0 10px 28px -8px rgba(74,26,44,.55); font-size:22px;
+    transition:transform .25s ease, background .25s ease;
+  }
+  .float-cta:hover{transform:scale(1.06); background:var(--wine-deep);}
+
+  ::selection{background:var(--wine); color:var(--pearl);}
+</style>
+</head>
+<body>
+
+<header id="siteHeader">
+  <nav>
+    <a href="#inicio" class="brand">
+      <img src="assets/logo.jpg" alt="Adriana Machado">
+      Adriana Machado
+    </a>
+    <div class="navlinks">
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#instituto">Instituto</a>
+      <a href="#galeria">El salón</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+    <a class="btn btn-primary nav-cta" href="https://ig.me/m/adrianamachadoestilista" target="_blank" rel="noopener">Reservar cita</a>
+    <button class="burger" id="burgerBtn" aria-label="Abrir menú" type="button">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#instituto">Instituto</a>
+    <a href="#galeria">El salón</a>
+    <a href="#contacto">Contacto</a>
+    <a class="cta" href="https://ig.me/m/adrianamachadoestilista" target="_blank" rel="noopener">Reservar cita →</a>
+  </div>
+</header>
+
+<section class="hero" id="inicio">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+    <span class="eyebrow reveal">Salón · Salto, Uruguay</span>
+    <h1 class="reveal reveal-delay-1">Adriana <em>Machado</em></h1>
+    <p class="tagline reveal reveal-delay-2">Colorista y Master Internacional. 37 años de oficio, técnica precisa y el trato cercano de siempre.</p>
+    <div class="hero-ctas reveal reveal-delay-3">
+      <a class="btn btn-primary" href="https://ig.me/m/adrianamachadoestilista" target="_blank" rel="noopener">Reservá tu cita</a>
+      <a class="btn btn-ghost" href="#servicios">Ver servicios</a>
+    </div>
+  </div>
+  <div class="scroll-cue">Scroll</div>
+</section>
+
+<section class="about" id="sobre-mi">
+  <div class="wrap about-grid">
+    <div class="about-photo reveal">
+      <img src="assets/about.jpg" alt="Espacio del salón de Adriana Machado" loading="lazy">
+    </div>
+    <div class="about-text reveal reveal-delay-1">
+      <span class="eyebrow">Sobre mí</span>
+      <h2>Detrás de cada transformación, 37 años de oficio</h2>
+      <p><strong>Adriana Machado</strong> es colorista y estilista con el título de <strong>Master Internacional</strong>. Dirige su salón en Salto desde hace más de tres décadas, formándose de manera constante para traer técnicas actuales de colorimetría sin perder el trato cercano que la distingue.</p>
+      <p>Hoy conduce un equipo bajo el mismo estándar de excelencia y comparte su oficio como docente en su instituto de formación.</p>
+      <div class="stats">
+        <div class="stat"><div class="num">37</div><div class="lbl">Años de trayectoria</div></div>
+        <div class="stat"><div class="num">Master</div><div class="lbl">Internacional</div></div>
+        <div class="stat"><div class="num">2</div><div class="lbl">Salón + Instituto</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="servicios">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Servicios</span>
+      <h2>Todo lo que tu cabello necesita, en un solo lugar</h2>
+      <p>Color, corte, tratamientos y peinados de fiesta — cada servicio nace de un diagnóstico real de tu cabello.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc-item reveal">
+        <img src="assets/servicio-color.jpg" alt="Colorimetría y balayage" loading="lazy">
+        <div class="svc-copy">
+          <div class="svc-num">01</div>
+          <h3>Colorimetría &amp; Balayage</h3>
+          <p>Color a medida para tu tono de piel y tu estilo — mechas, balayage, tonalizantes y retoque de raíz.</p>
+        </div>
+      </article>
+      <article class="svc-item reveal reveal-delay-1">
+        <img src="assets/servicio-corte.jpg" alt="Cortes y peinados" loading="lazy">
+        <div class="svc-copy">
+          <div class="svc-num">02</div>
+          <h3>Cortes &amp; Peinados</h3>
+          <p>Cortes que enmarcan tu rostro y peinados para el día a día, hechos a tu medida.</p>
+        </div>
+      </article>
+      <article class="svc-item reveal reveal-delay-2">
+        <img src="assets/servicio-tratamiento.jpg" alt="Alisados y tratamientos" loading="lazy">
+        <div class="svc-copy">
+          <div class="svc-num">03</div>
+          <h3>Alisados &amp; Tratamientos</h3>
+          <p>Alisados orgánicos y tratamientos de brillo y nutrición para devolverle vida al cabello.</p>
+        </div>
+      </article>
+      <article class="svc-item reveal">
+        <img src="assets/servicio-fiesta.jpg" alt="Peinados de fiesta y quinceañeras" loading="lazy">
+        <div class="svc-copy">
+          <div class="svc-num">04</div>
+          <h3>Fiestas &amp; Quinceañeras</h3>
+          <p>Peinados de fiesta con prueba previa incluida, para llegar a tu día sin sorpresas.</p>
+        </div>
+      </article>
+      <article class="svc-item reveal reveal-delay-1">
+        <img src="assets/servicio-instituto.jpg" alt="Instituto de formación" loading="lazy">
+        <div class="svc-copy">
+          <div class="svc-num">05</div>
+          <h3>Instituto de Formación</h3>
+          <p>Cursos de colorimetría y estilismo dictados por Adriana, para quienes quieren vivir de esto.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="instituto" id="instituto">
+  <div class="wrap">
+    <div class="instituto-panel reveal">
+      <div class="instituto-copy">
+        <span class="eyebrow">@adrianamachadoinstituto</span>
+        <h2>Formate con una Master Internacional</h2>
+        <p>Clases con técnica real, de la mano de 37 años de oficio. Adriana forma a la próxima generación de estilistas con la misma exigencia que pone en cada clienta.</p>
+        <div>
+          <a class="btn btn-primary" href="https://www.instagram.com/adrianamachadoinstituto" target="_blank" rel="noopener">Conocé el instituto</a>
+        </div>
+      </div>
+      <div class="instituto-photo">
+        <img src="assets/instituto.jpg" alt="Instituto de formación Adriana Machado" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Por qué elegirla</span>
+      <h2>La experiencia se nota en el resultado</h2>
+    </div>
+    <div class="why-list">
+      <div class="why-item reveal">
+        <span class="mark">37</span>
+        <h3>Trayectoria real</h3>
+        <p>Más de tres décadas dedicadas a la colorimetría y el estilismo capilar.</p>
+      </div>
+      <div class="why-item reveal reveal-delay-1">
+        <span class="mark">M</span>
+        <h3>Formación continua</h3>
+        <p>Título de Master Internacional y actualización constante en técnicas nuevas.</p>
+      </div>
+      <div class="why-item reveal reveal-delay-2">
+        <span class="mark">✦</span>
+        <h3>Atención personalizada</h3>
+        <p>Cada servicio empieza con un diagnóstico real — no con una fórmula genérica.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="galeria">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">El salón</span>
+      <h2>Un vistazo al espacio</h2>
+      <p>El ambiente donde suceden las transformaciones — cálido, cuidado al detalle, pensado para que te sientas en casa.</p>
+    </div>
+    <div class="gal-grid">
+      <div class="gal-item reveal"><img src="assets/galeria-1.jpg" alt="Detalle del salón" loading="lazy"></div>
+      <div class="gal-item reveal reveal-delay-1"><img src="assets/galeria-2.jpg" alt="Ambiente del salón" loading="lazy"></div>
+      <div class="gal-item reveal reveal-delay-2"><img src="assets/galeria-3.jpg" alt="Espacio de trabajo" loading="lazy"></div>
+      <div class="gal-item reveal"><img src="assets/galeria-4.jpg" alt="Rincón del salón" loading="lazy"></div>
+      <div class="gal-item reveal reveal-delay-1"><img src="assets/galeria-5.jpg" alt="Detalle decorativo" loading="lazy"></div>
+      <div class="gal-item reveal reveal-delay-2"><img src="assets/galeria-6.jpg" alt="Vista del salón" loading="lazy"></div>
+    </div>
+    <div class="community reveal">
+      <div class="community-stats">
+        <div><div class="num">569+</div><div class="lbl">Seguidores en Instagram</div></div>
+        <div><div class="num">384+</div><div class="lbl">Publicaciones</div></div>
+        <div><div class="num">37</div><div class="lbl">Años de oficio</div></div>
+      </div>
+      <a class="btn btn-ghost" href="https://www.instagram.com/adrianamachadoestilista" target="_blank" rel="noopener">Seguila en Instagram →</a>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contacto">
+  <div class="contact-bg" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="contact-inner reveal">
+      <span class="eyebrow">Contacto</span>
+      <h2>Coordinemos tu cita</h2>
+      <p>Escribinos por Instagram para consultar disponibilidad, contarnos qué querés hacerte y coordinar el mejor horario.</p>
+      <div class="contact-ctas">
+        <a class="btn btn-primary" href="https://ig.me/m/adrianamachadoestilista" target="_blank" rel="noopener">Escribir por Instagram</a>
+        <a class="btn btn-ghost" href="https://www.instagram.com/adrianamachadoestilista" target="_blank" rel="noopener">@adrianamachadoestilista</a>
+      </div>
+      <div class="contact-details">
+        <div class="cdetail"><div class="lbl">Ubicación</div><div class="val">Salto, Uruguay</div></div>
+        <div class="cdetail"><div class="lbl">Instagram — Salón</div><div class="val"><a href="https://www.instagram.com/adrianamachadoestilista" target="_blank" rel="noopener">@adrianamachadoestilista</a></div></div>
+        <div class="cdetail"><div class="lbl">Instagram — Instituto</div><div class="val"><a href="https://www.instagram.com/adrianamachadoinstituto" target="_blank" rel="noopener">@adrianamachadoinstituto</a></div></div>
+        <div class="cdetail"><div class="lbl">Especialidad</div><div class="val">Colorimetría · Master Internacional</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-inner">
+    <div>© 2026 Adriana Machado — Salto, Uruguay</div>
+    <div class="foot-links">
+      <a href="https://www.instagram.com/adrianamachadoestilista" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.instagram.com/adrianamachadoinstituto" target="_blank" rel="noopener">Instituto</a>
+      <a href="#inicio">Volver arriba</a>
+    </div>
+  </div>
+</footer>
+
+<a class="float-cta" href="https://ig.me/m/adrianamachadoestilista" target="_blank" rel="noopener" title="Escribir por Instagram" aria-label="Escribir por Instagram">✎</a>
+
+<script>
+  const header = document.getElementById('siteHeader');
+  const burger = document.getElementById('burgerBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 40);
+  }, { passive: true });
+
+  burger.addEventListener('click', () => {
+    const open = mobileMenu.classList.toggle('open');
+    burger.classList.toggle('open', open);
+    burger.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+  });
+
+  document.querySelectorAll('.mobile-menu a').forEach(a => {
+    a.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      burger.classList.remove('open');
+    });
+  });
+
+  const reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach(el => io.observe(el));
+  } else {
+    reveals.forEach(el => el.classList.add('visible'));
+  }
+
+  // Hero text visible on load
+  requestAnimationFrame(() => {
+    document.querySelectorAll('.hero .reveal').forEach(el => el.classList.add('visible'));
+  });
+</script>
+</body>
+</html>
