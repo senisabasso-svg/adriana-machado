@@ -152,19 +152,31 @@
 
   .about{
     background:
-      radial-gradient(ellipse 80% 50% at 100% 0%, rgba(201,169,120,.14), transparent 55%),
+      radial-gradient(ellipse 70% 45% at 0% 0%, rgba(201,169,120,.12), transparent 50%),
+      radial-gradient(ellipse 60% 40% at 100% 100%, rgba(139,61,86,.05), transparent 45%),
       var(--white);
   }
-  .about-grid{display:grid; grid-template-columns:1fr; gap:40px; align-items:center;}
-  @media(min-width:900px){.about-grid{grid-template-columns:.9fr 1.1fr; gap:72px;}}
-  .about-photos{display:flex; flex-direction:column; gap:14px;}
-  .about-photo{position:relative; overflow:hidden; aspect-ratio:4/5;}
-  .about-photo.secondary{aspect-ratio:4/3;}
-  .about-photo img{width:100%; height:100%; object-fit:cover;}
-  .about-photo::before{
-    content:''; position:absolute; inset:18px; border:1px solid rgba(255,255,255,.4); z-index:1; pointer-events:none;
+  .about-top{
+    display:grid; grid-template-columns:1fr; gap:40px; align-items:center;
+    margin-bottom:36px;
   }
-  .about-photo.secondary::before{inset:12px;}
+  @media(min-width:900px){
+    .about-top{grid-template-columns:1fr 1.05fr; gap:64px; margin-bottom:48px;}
+  }
+  .about-feature{
+    position:relative; overflow:hidden; aspect-ratio:4/5;
+    background:var(--pearl-2);
+  }
+  .about-feature img{
+    width:100%; height:100%; object-fit:cover; object-position:center 20%;
+    transition:transform .7s ease;
+  }
+  .about-feature:hover img{transform:scale(1.03);}
+  .about-feature::after{
+    content:''; position:absolute; inset:0;
+    box-shadow:inset 0 0 0 1px rgba(42,26,32,.06);
+    pointer-events:none;
+  }
   .about-text h2{font-size:clamp(30px,3.8vw,44px); font-weight:500; margin-bottom:22px; line-height:1.15;}
   .about-text p{color:var(--muted); font-size:16px; margin-bottom:18px;}
   .about-text p strong{color:var(--ink); font-weight:600;}
@@ -172,6 +184,21 @@
   .stat{border-top:1px solid var(--line); padding-top:14px;}
   .stat .num{font-family:'Cormorant Garamond',serif; font-size:32px; color:var(--wine); font-weight:600; line-height:1;}
   .stat .lbl{font-size:12px; color:var(--muted); letter-spacing:.04em; margin-top:6px;}
+  .about-mosaic{
+    display:grid; grid-template-columns:repeat(2,1fr); gap:10px;
+  }
+  @media(min-width:700px){
+    .about-mosaic{grid-template-columns:repeat(3,1fr); gap:12px;}
+  }
+  .about-tile{
+    position:relative; overflow:hidden; aspect-ratio:1/1.2;
+    background:var(--pearl-2);
+  }
+  .about-tile img{
+    width:100%; height:100%; object-fit:cover; object-position:center 25%;
+    transition:transform .65s ease;
+  }
+  .about-tile:hover img{transform:scale(1.05);}
 
   .services{background:linear-gradient(180deg, var(--pearl), var(--pearl-2));}
   .svc-grid{display:grid; grid-template-columns:1fr; gap:16px;}
@@ -354,25 +381,30 @@
 </section>
 
 <section class="about" id="sobre-mi">
-  <div class="wrap about-grid">
-    <div class="about-photos reveal">
-      <div class="about-photo">
-        <img src="assets/about.jpg" alt="Adriana Machado trabajando en el instituto" loading="lazy">
+  <div class="wrap">
+    <div class="about-top">
+      <div class="about-feature reveal">
+        <img src="assets/about-4.jpg" alt="Adriana Machado en su salón" loading="lazy">
       </div>
-      <div class="about-photo secondary">
-        <img src="assets/about-salon.jpg" alt="Adriana Machado en su salón" loading="lazy">
+      <div class="about-text reveal reveal-delay-1">
+        <span class="eyebrow">Sobre mí</span>
+        <h2>Detrás de cada transformación, 37 años de oficio</h2>
+        <p><strong>Adriana Machado</strong> es colorista y estilista con el título de <strong>Master Internacional</strong>. Dirige su salón en Salto desde hace más de tres décadas, formándose de manera constante para traer técnicas actuales de colorimetría sin perder el trato cercano que la distingue.</p>
+        <p>Hoy conduce un equipo bajo el mismo estándar de excelencia y comparte su oficio como docente en su instituto de formación.</p>
+        <div class="stats">
+          <div class="stat"><div class="num">37</div><div class="lbl">Años de trayectoria</div></div>
+          <div class="stat"><div class="num">Master</div><div class="lbl">Internacional</div></div>
+          <div class="stat"><div class="num">2</div><div class="lbl">Salón + Instituto</div></div>
+        </div>
       </div>
     </div>
-    <div class="about-text reveal reveal-delay-1">
-      <span class="eyebrow">Sobre mí</span>
-      <h2>Detrás de cada transformación, 37 años de oficio</h2>
-      <p><strong>Adriana Machado</strong> es colorista y estilista con el título de <strong>Master Internacional</strong>. Dirige su salón en Salto desde hace más de tres décadas, formándose de manera constante para traer técnicas actuales de colorimetría sin perder el trato cercano que la distingue.</p>
-      <p>Hoy conduce un equipo bajo el mismo estándar de excelencia y comparte su oficio como docente en su instituto de formación.</p>
-      <div class="stats">
-        <div class="stat"><div class="num">37</div><div class="lbl">Años de trayectoria</div></div>
-        <div class="stat"><div class="num">Master</div><div class="lbl">Internacional</div></div>
-        <div class="stat"><div class="num">2</div><div class="lbl">Salón + Instituto</div></div>
-      </div>
+    <div class="about-mosaic">
+      <div class="about-tile reveal"><img src="assets/about.jpg" alt="Adriana formando en el instituto" loading="lazy"></div>
+      <div class="about-tile reveal reveal-delay-1"><img src="assets/about-1.jpg" alt="Adriana peinando con secador" loading="lazy"></div>
+      <div class="about-tile reveal reveal-delay-2"><img src="assets/about-3.jpg" alt="Adriana trabajando en el salón" loading="lazy"></div>
+      <div class="about-tile reveal"><img src="assets/about-salon.jpg" alt="Adriana en su espacio de trabajo" loading="lazy"></div>
+      <div class="about-tile reveal reveal-delay-1"><img src="assets/about-2.jpg" alt="Adriana con certificado profesional" loading="lazy"></div>
+      <div class="about-tile reveal reveal-delay-2"><img src="assets/about-5.jpg" alt="Adriana en un evento profesional" loading="lazy"></div>
     </div>
   </div>
 </section>
