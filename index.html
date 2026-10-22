@@ -274,15 +274,16 @@
 
   .gallery{background:var(--white);}
   .gal-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:12px;}
-  @media(min-width:700px){.gal-grid{grid-template-columns:repeat(3,1fr); gap:14px;}}
-  .gal-item{overflow:hidden; aspect-ratio:1/1.2; position:relative;}
-  .gal-item img{width:100%; height:100%; object-fit:cover; transition:transform .7s ease;}
-  .gal-item:hover img{transform:scale(1.06);}
-  .gal-item:nth-child(2),
-  .gal-item:nth-child(5){aspect-ratio:1/1.35;}
-  @media(max-width:699px){
-    .gal-item:nth-child(2),
-    .gal-item:nth-child(5){aspect-ratio:1/1.2;}
+  @media(min-width:700px){.gal-grid{grid-template-columns:repeat(6,1fr); gap:14px;}}
+  .gal-item{overflow:hidden; aspect-ratio:1/1.15; position:relative; background:var(--pearl-2);}
+  .gal-item img{width:100%; height:100%; object-fit:cover; object-position:center; transition:transform .7s ease;}
+  .gal-item:hover img{transform:scale(1.05);}
+  @media(min-width:700px){
+    .gal-item:nth-child(1){grid-column:span 3; aspect-ratio:16/10;}
+    .gal-item:nth-child(2){grid-column:span 3; aspect-ratio:16/10;}
+    .gal-item:nth-child(3),
+    .gal-item:nth-child(4),
+    .gal-item:nth-child(5){grid-column:span 2; aspect-ratio:4/5;}
   }
 
   .community{
@@ -526,17 +527,16 @@
 <section class="gallery" id="galeria">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="eyebrow">El salón</span>
-      <h2>Un vistazo al espacio</h2>
-      <p>El ambiente donde suceden las transformaciones — cálido, cuidado al detalle, pensado para que te sientas en casa.</p>
+      <span class="eyebrow">Salón principal</span>
+      <h2>Un espacio pensado para vos</h2>
+      <p>Ambiente luminoso, estaciones profesionales y cada detalle cuidado para que te sientas como en casa.</p>
     </div>
     <div class="gal-grid">
-      <div class="gal-item reveal"><img src="assets/galeria-1.jpg" alt="Balayage rubio con capa del salón" loading="lazy"></div>
-      <div class="gal-item reveal reveal-delay-1"><img src="assets/galeria-2.jpg" alt="Balayage con ondas y brillo" loading="lazy"></div>
-      <div class="gal-item reveal reveal-delay-2"><img src="assets/galeria-3.jpg" alt="Color y ondas en cabello largo" loading="lazy"></div>
-      <div class="gal-item reveal"><img src="assets/galeria-4.jpg" alt="Corte lob con mechas rubias" loading="lazy"></div>
-      <div class="gal-item reveal reveal-delay-1"><img src="assets/galeria-5.jpg" alt="Color rojo intenso con ondas" loading="lazy"></div>
-      <div class="gal-item reveal reveal-delay-2"><img src="assets/galeria-6.jpg" alt="Color creativo violeta y magenta" loading="lazy"></div>
+      <div class="gal-item reveal"><img src="assets/galeria-1.jpg" alt="Vista general del salón principal" loading="lazy"></div>
+      <div class="gal-item reveal reveal-delay-1"><img src="assets/galeria-2.jpg" alt="Estaciones de trabajo y lavacabezas" loading="lazy"></div>
+      <div class="gal-item reveal reveal-delay-2"><img src="assets/galeria-3.jpg" alt="Detalle de las sillas y espejos del salón" loading="lazy"></div>
+      <div class="gal-item reveal"><img src="assets/galeria-4.jpg" alt="Interior del salón con barra americana" loading="lazy"></div>
+      <div class="gal-item reveal reveal-delay-1"><img src="assets/galeria-5.jpg" alt="Adriana Machado en el salón principal" loading="lazy"></div>
     </div>
     <div class="community reveal">
       <div class="community-stats">
