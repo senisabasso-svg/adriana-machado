@@ -251,6 +251,25 @@
   .color-item:hover img{transform:scale(1.05);}
   .color-cta{margin-top:40px; text-align:center;}
 
+  .peinados{background:var(--white);}
+  .peinado-grid{
+    display:grid; grid-template-columns:repeat(2,1fr); gap:10px;
+  }
+  @media(min-width:700px){
+    .peinado-grid{grid-template-columns:repeat(4,1fr); gap:12px;}
+  }
+  .peinado-item{
+    position:relative; overflow:hidden; aspect-ratio:3/4;
+    background:var(--pearl-2);
+  }
+  .peinado-item.feature{grid-column:span 2; aspect-ratio:4/3;}
+  .peinado-item img{
+    width:100%; height:100%; object-fit:cover; object-position:center 20%;
+    transition:transform .65s ease;
+  }
+  .peinado-item:hover img{transform:scale(1.05);}
+  .peinado-cta{margin-top:40px; text-align:center;}
+
   .instituto{background:var(--white); position:relative;}
   .instituto-panel{
     display:grid; grid-template-columns:1fr; overflow:hidden;
@@ -384,6 +403,7 @@
       <a href="#sobre-mi">Sobre mí</a>
       <a href="#servicios">Servicios</a>
       <a href="#colorimetria">Colorimetría</a>
+      <a href="#peinados">Peinados</a>
       <a href="#instituto">Instituto</a>
       <a href="#galeria">El salón</a>
       <a href="#contacto">Contacto</a>
@@ -397,6 +417,7 @@
     <a href="#sobre-mi">Sobre mí</a>
     <a href="#servicios">Servicios</a>
     <a href="#colorimetria">Colorimetría</a>
+    <a href="#peinados">Peinados</a>
     <a href="#instituto">Instituto</a>
     <a href="#galeria">El salón</a>
     <a href="#contacto">Contacto</a>
@@ -469,14 +490,14 @@
           <p>Color a medida para tu tono de piel y tu estilo — mechas, balayage, tonalizantes y retoque de raíz.</p>
         </div>
       </a>
-      <article class="svc-item reveal reveal-delay-1">
+      <a class="svc-item reveal reveal-delay-1" href="#peinados">
         <img src="assets/servicio-corte.jpg" alt="Corte bob degradado profesional" loading="lazy">
         <div class="svc-copy">
           <div class="svc-num">02</div>
           <h3>Cortes &amp; Peinados</h3>
           <p>Cortes que enmarcan tu rostro y peinados para el día a día, hechos a tu medida.</p>
         </div>
-      </article>
+      </a>
       <article class="svc-item reveal reveal-delay-2">
         <img src="assets/servicio-tratamiento.jpg" alt="Tratamiento capilar en proceso" loading="lazy">
         <div class="svc-copy">
@@ -485,14 +506,14 @@
           <p>Alisados orgánicos y tratamientos de brillo y nutrición para devolverle vida al cabello.</p>
         </div>
       </article>
-      <article class="svc-item reveal">
+      <a class="svc-item reveal" href="#peinados">
         <img src="assets/servicio-fiesta.jpg" alt="Peinado recogido para fiesta o quinceañera" loading="lazy">
         <div class="svc-copy">
           <div class="svc-num">04</div>
           <h3>Fiestas &amp; Quinceañeras</h3>
           <p>Peinados de fiesta con prueba previa incluida, para llegar a tu día sin sorpresas.</p>
         </div>
-      </article>
+      </a>
       <article class="svc-item reveal reveal-delay-1">
         <img src="assets/servicio-instituto.jpg" alt="Taller de formación en el instituto" loading="lazy">
         <div class="svc-copy">
@@ -549,6 +570,51 @@
     </div>
     <div class="color-cta reveal">
       <a class="btn btn-primary" href="https://ig.me/m/adrianamachadoestilista" target="_blank" rel="noopener">Consultá por tu color</a>
+    </div>
+  </div>
+</section>
+
+<section class="peinados" id="peinados">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Portfolio</span>
+      <h2>Peinados</h2>
+      <p>Recogidos, trenzas y peinados de fiesta — técnica y detalle para cada ocasión especial.</p>
+    </div>
+    <div class="peinado-grid">
+      <div class="peinado-item feature reveal">
+        <img src="assets/peinado-1.jpg" alt="Recogido elegante con accesorios brillantes" loading="lazy">
+      </div>
+      <div class="peinado-item reveal reveal-delay-1">
+        <img src="assets/peinado-2.jpg" alt="Trenza pull-through con aros dorados" loading="lazy">
+      </div>
+      <div class="peinado-item reveal reveal-delay-2">
+        <img src="assets/peinado-3.jpg" alt="Media cola con trenza y rizos en rojo" loading="lazy">
+      </div>
+      <div class="peinado-item reveal">
+        <img src="assets/peinado-4.jpg" alt="Recogido de fiesta con perlas y flores" loading="lazy">
+      </div>
+      <div class="peinado-item reveal reveal-delay-1">
+        <img src="assets/peinado-5.jpg" alt="Trenza alta con aros plateados" loading="lazy">
+      </div>
+      <div class="peinado-item reveal reveal-delay-2">
+        <img src="assets/peinado-6.jpg" alt="Recogido bajo con trenza y ondas" loading="lazy">
+      </div>
+      <div class="peinado-item reveal">
+        <img src="assets/peinado-7.jpg" alt="Media cola trenzada con ondas" loading="lazy">
+      </div>
+      <div class="peinado-item reveal reveal-delay-1">
+        <img src="assets/peinado-8.jpg" alt="Recogido estructurado en cabello canoso" loading="lazy">
+      </div>
+      <div class="peinado-item reveal reveal-delay-2">
+        <img src="assets/peinado-9.jpg" alt="Cola alta con trenza y burbujas" loading="lazy">
+      </div>
+      <div class="peinado-item reveal">
+        <img src="assets/peinado-10.jpg" alt="Peinado medio recogido con ondas y flequillo" loading="lazy">
+      </div>
+    </div>
+    <div class="peinado-cta reveal">
+      <a class="btn btn-primary" href="https://ig.me/m/adrianamachadoestilista" target="_blank" rel="noopener">Reservá tu peinado</a>
     </div>
   </div>
 </section>
