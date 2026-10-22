@@ -284,11 +284,20 @@
   @media(min-width:700px){
     .peinado-grid{grid-template-columns:repeat(4,1fr); gap:12px;}
   }
+  .peinado-cover{
+    position:relative; overflow:hidden; aspect-ratio:16/10;
+    margin-bottom:12px; background:var(--pearl-2);
+  }
+  @media(min-width:700px){.peinado-cover{aspect-ratio:21/9; margin-bottom:14px;}}
+  .peinado-cover img{
+    width:100%; height:100%; object-fit:cover; object-position:center 30%;
+    transition:transform .7s ease;
+  }
+  .peinado-cover:hover img{transform:scale(1.03);}
   .peinado-item{
     position:relative; overflow:hidden; aspect-ratio:3/4;
     background:var(--pearl-2);
   }
-  .peinado-item.feature{grid-column:span 2; aspect-ratio:4/3;}
   .peinado-item img{
     width:100%; height:100%; object-fit:cover; object-position:center 20%;
     transition:transform .65s ease;
@@ -511,7 +520,7 @@
     </div>
     <div class="svc-grid">
       <a class="svc-item reveal" href="#colorimetria">
-        <img src="assets/servicio-color.jpg" alt="Resultado de colorimetría y balayage" loading="lazy">
+        <img src="assets/portada-color.jpg" alt="Adriana Machado en colorimetría" loading="lazy">
         <div class="svc-copy">
           <div class="svc-num">01</div>
           <h3>Colorimetría &amp; Balayage</h3>
@@ -519,7 +528,7 @@
         </div>
       </a>
       <a class="svc-item reveal reveal-delay-1" href="#corte">
-        <img src="assets/servicio-corte.jpg" alt="Adriana Machado realizando un corte" loading="lazy">
+        <img src="assets/portada-corte.jpg" alt="Adriana Machado realizando un corte" loading="lazy">
         <div class="svc-copy">
           <div class="svc-num">02</div>
           <h3>Corte</h3>
@@ -535,7 +544,7 @@
         </div>
       </article>
       <a class="svc-item reveal" href="#peinados">
-        <img src="assets/servicio-fiesta.jpg" alt="Peinado recogido para fiesta o quinceañera" loading="lazy">
+        <img src="assets/portada-peinado.jpg" alt="Peinado recogido para fiesta o quinceañera" loading="lazy">
         <div class="svc-copy">
           <div class="svc-num">04</div>
           <h3>Fiestas &amp; Quinceañeras</h3>
@@ -562,7 +571,7 @@
       <p>Color pensado a medida: balayage, mechas, tonos vivos y correcciones — con la mirada de una Experta Colorista con mención en Química.</p>
     </div>
     <div class="color-cover reveal">
-      <img src="assets/color-1.jpg" alt="Adriana Machado aplicando técnica de color con papel aluminio" loading="lazy">
+      <img src="assets/portada-color.jpg" alt="Adriana Machado aplicando técnica de color con papel aluminio" loading="lazy">
     </div>
     <div class="color-grid">
       <div class="color-item reveal reveal-delay-1">
@@ -610,7 +619,7 @@
       <p>Diagnóstico, técnica y forma — un corte pensado para tu rostro, tu cabello y tu día a día.</p>
     </div>
     <div class="corte-cover reveal">
-      <img src="assets/corte-1.jpg" alt="Adriana Machado realizando un corte profesional" loading="lazy">
+      <img src="assets/portada-corte.jpg" alt="Adriana Machado realizando un corte profesional" loading="lazy">
     </div>
     <div class="corte-cta reveal">
       <a class="btn btn-primary" href="https://ig.me/m/adrianamachadoestilista" target="_blank" rel="noopener">Reservá tu corte</a>
@@ -625,10 +634,10 @@
       <h2>Peinados</h2>
       <p>Recogidos, trenzas y peinados de fiesta — técnica y detalle para cada ocasión especial.</p>
     </div>
+    <div class="peinado-cover reveal">
+      <img src="assets/portada-peinado.jpg" alt="Recogido elegante con accesorios brillantes" loading="lazy">
+    </div>
     <div class="peinado-grid">
-      <div class="peinado-item feature reveal">
-        <img src="assets/peinado-1.jpg" alt="Recogido elegante con accesorios brillantes" loading="lazy">
-      </div>
       <div class="peinado-item reveal reveal-delay-1">
         <img src="assets/peinado-2.jpg" alt="Trenza pull-through con aros dorados" loading="lazy">
       </div>
