@@ -322,6 +322,38 @@
   .peinado-item:hover img{transform:scale(1.05);}
   .peinado-cta{margin-top:40px; text-align:center;}
 
+  .novias{
+    background:
+      radial-gradient(ellipse 70% 45% at 0% 0%, rgba(201,169,120,.12), transparent 50%),
+      var(--pearl);
+  }
+  .novias-cover{
+    position:relative; overflow:hidden; aspect-ratio:16/10;
+    margin-bottom:12px; background:var(--pearl-2);
+  }
+  @media(min-width:700px){.novias-cover{aspect-ratio:21/9; margin-bottom:14px;}}
+  .novias-cover img{
+    width:100%; height:100%; object-fit:cover; object-position:center 35%;
+    transition:transform .7s ease;
+  }
+  .novias-cover:hover img{transform:scale(1.03);}
+  .novias-grid{
+    display:grid; grid-template-columns:repeat(2,1fr); gap:10px;
+  }
+  @media(min-width:700px){
+    .novias-grid{grid-template-columns:repeat(4,1fr); gap:12px;}
+  }
+  .novias-item{
+    position:relative; overflow:hidden; aspect-ratio:3/4;
+    background:var(--pearl-2);
+  }
+  .novias-item img{
+    width:100%; height:100%; object-fit:cover; object-position:center 20%;
+    transition:transform .65s ease;
+  }
+  .novias-item:hover img{transform:scale(1.05);}
+  .novias-cta{margin-top:40px; text-align:center;}
+
   .instituto{background:var(--white); position:relative;}
   .instituto-panel{
     display:grid; grid-template-columns:1fr; overflow:hidden;
@@ -457,6 +489,7 @@
       <a href="#colorimetria">Colorimetría</a>
       <a href="#corte">Corte</a>
       <a href="#peinados">Peinados</a>
+      <a href="#novias">Novias</a>
       <a href="#instituto">Instituto</a>
       <a href="#galeria">El salón</a>
       <a href="#contacto">Contacto</a>
@@ -472,6 +505,7 @@
     <a href="#colorimetria">Colorimetría</a>
     <a href="#corte">Corte</a>
     <a href="#peinados">Peinados</a>
+    <a href="#novias">Novias</a>
     <a href="#instituto">Instituto</a>
     <a href="#galeria">El salón</a>
     <a href="#contacto">Contacto</a>
@@ -560,12 +594,12 @@
           <p>Alisados orgánicos y tratamientos de brillo y nutrición para devolverle vida al cabello.</p>
         </div>
       </a>
-      <a class="svc-item reveal" href="#peinados">
-        <img src="assets/portada-peinado.jpg" alt="Peinado de fiesta con tocado" loading="lazy">
+      <a class="svc-item reveal" href="#novias">
+        <img src="assets/portada-novias.jpg" alt="Peinado de novia con tocado de perlas" loading="lazy">
         <div class="svc-copy">
           <div class="svc-num">04</div>
-          <h3>Fiestas</h3>
-          <p>Peinados de fiesta con prueba previa incluida, para llegar a tu día sin sorpresas.</p>
+          <h3>Novias y quinceañeras</h3>
+          <p>Peinados para tu gran día, con prueba previa incluida, para llegar sin sorpresas.</p>
         </div>
       </a>
       <article class="svc-item reveal reveal-delay-1">
@@ -701,6 +735,23 @@
     </div>
     <div class="peinado-cta reveal">
       <a class="btn btn-primary" href="https://ig.me/m/adrianamachadoestilista" target="_blank" rel="noopener">Reservá tu peinado</a>
+    </div>
+  </div>
+</section>
+
+<section class="novias" id="novias">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Tu gran día</span>
+      <h2>Novias y quinceañeras</h2>
+      <p>Peinados pensados para el momento más importante — con prueba previa, detalle y el acabado que soñás.</p>
+    </div>
+    <div class="novias-cover reveal">
+      <img src="assets/portada-novias.jpg" alt="Colocación de tocado de perlas en peinado de novia" loading="lazy">
+    </div>
+    <div class="novias-grid" id="novias-gallery"></div>
+    <div class="novias-cta reveal">
+      <a class="btn btn-primary" href="https://ig.me/m/adrianamachadoestilista" target="_blank" rel="noopener">Coordiná tu prueba</a>
     </div>
   </div>
 </section>
