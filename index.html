@@ -228,6 +228,29 @@
   .svc-item h3{font-size:24px; font-weight:500; margin-bottom:10px; color:var(--white);}
   .svc-item p{font-size:13.5px; color:rgba(255,255,255,.78); max-width:280px; line-height:1.5;}
 
+  .colorimetria{
+    background:
+      radial-gradient(ellipse 70% 50% at 100% 0%, rgba(139,61,86,.06), transparent 50%),
+      var(--pearl);
+  }
+  .color-grid{
+    display:grid; grid-template-columns:repeat(2,1fr); gap:10px;
+  }
+  @media(min-width:700px){
+    .color-grid{grid-template-columns:repeat(4,1fr); gap:12px;}
+  }
+  .color-item{
+    position:relative; overflow:hidden; aspect-ratio:3/4;
+    background:var(--pearl-2);
+  }
+  .color-item.feature{grid-column:span 2; aspect-ratio:4/3;}
+  .color-item img{
+    width:100%; height:100%; object-fit:cover; object-position:center 20%;
+    transition:transform .65s ease;
+  }
+  .color-item:hover img{transform:scale(1.05);}
+  .color-cta{margin-top:40px; text-align:center;}
+
   .instituto{background:var(--white); position:relative;}
   .instituto-panel{
     display:grid; grid-template-columns:1fr; overflow:hidden;
@@ -360,6 +383,7 @@
     <div class="navlinks">
       <a href="#sobre-mi">Sobre mí</a>
       <a href="#servicios">Servicios</a>
+      <a href="#colorimetria">Colorimetría</a>
       <a href="#instituto">Instituto</a>
       <a href="#galeria">El salón</a>
       <a href="#contacto">Contacto</a>
@@ -372,6 +396,7 @@
   <div class="mobile-menu" id="mobileMenu">
     <a href="#sobre-mi">Sobre mí</a>
     <a href="#servicios">Servicios</a>
+    <a href="#colorimetria">Colorimetría</a>
     <a href="#instituto">Instituto</a>
     <a href="#galeria">El salón</a>
     <a href="#contacto">Contacto</a>
@@ -436,14 +461,14 @@
       <p>Color, corte, tratamientos y peinados de fiesta — cada servicio nace de un diagnóstico real de tu cabello.</p>
     </div>
     <div class="svc-grid">
-      <article class="svc-item reveal">
+      <a class="svc-item reveal" href="#colorimetria">
         <img src="assets/servicio-color.jpg" alt="Resultado de colorimetría y balayage" loading="lazy">
         <div class="svc-copy">
           <div class="svc-num">01</div>
           <h3>Colorimetría &amp; Balayage</h3>
           <p>Color a medida para tu tono de piel y tu estilo — mechas, balayage, tonalizantes y retoque de raíz.</p>
         </div>
-      </article>
+      </a>
       <article class="svc-item reveal reveal-delay-1">
         <img src="assets/servicio-corte.jpg" alt="Corte bob degradado profesional" loading="lazy">
         <div class="svc-copy">
@@ -476,6 +501,51 @@
           <p>Cursos de colorimetría y estilismo dictados por Adriana, para quienes quieren vivir de esto.</p>
         </div>
       </article>
+    </div>
+  </div>
+</section>
+
+<section class="colorimetria" id="colorimetria">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Especialidad</span>
+      <h2>Colorimetría y balayage</h2>
+      <p>Color pensado a medida: balayage, mechas, tonos vivos y correcciones — con la mirada de una Experta Colorista con mención en Química.</p>
+    </div>
+    <div class="color-grid">
+      <div class="color-item feature reveal">
+        <img src="assets/color-1.jpg" alt="Adriana Machado aplicando técnica de color con papel aluminio" loading="lazy">
+      </div>
+      <div class="color-item reveal reveal-delay-1">
+        <img src="assets/color-2.jpg" alt="Color rojo con ondas voluminosas" loading="lazy">
+      </div>
+      <div class="color-item reveal reveal-delay-2">
+        <img src="assets/color-3.jpg" alt="Color rojo intenso con ondas largas" loading="lazy">
+      </div>
+      <div class="color-item reveal">
+        <img src="assets/color-4.jpg" alt="Balayage rubio ceniza en cabello largo" loading="lazy">
+      </div>
+      <div class="color-item reveal reveal-delay-1">
+        <img src="assets/color-5.jpg" alt="Color rojo cereza brillante" loading="lazy">
+      </div>
+      <div class="color-item reveal">
+        <img src="assets/color-6.jpg" alt="Balayage rubio con ondas suaves" loading="lazy">
+      </div>
+      <div class="color-item reveal reveal-delay-1">
+        <img src="assets/color-7.jpg" alt="Balayage money piece en rubio" loading="lazy">
+      </div>
+      <div class="color-item reveal reveal-delay-2">
+        <img src="assets/color-8.jpg" alt="Rizos definidos en color rojo intenso" loading="lazy">
+      </div>
+      <div class="color-item reveal">
+        <img src="assets/color-9.jpg" alt="Balayage cobre sobre base oscura" loading="lazy">
+      </div>
+      <div class="color-item reveal reveal-delay-1">
+        <img src="assets/color-10.jpg" alt="Balayage rubio dorado con ondas" loading="lazy">
+      </div>
+    </div>
+    <div class="color-cta reveal">
+      <a class="btn btn-primary" href="https://ig.me/m/adrianamachadoestilista" target="_blank" rel="noopener">Consultá por tu color</a>
     </div>
   </div>
 </section>
