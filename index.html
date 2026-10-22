@@ -239,11 +239,20 @@
   @media(min-width:700px){
     .color-grid{grid-template-columns:repeat(4,1fr); gap:12px;}
   }
+  .color-cover{
+    position:relative; overflow:hidden; aspect-ratio:16/10;
+    margin-bottom:12px; background:var(--pearl-2);
+  }
+  @media(min-width:700px){.color-cover{aspect-ratio:21/9; margin-bottom:14px;}}
+  .color-cover img{
+    width:100%; height:100%; object-fit:cover; object-position:center 30%;
+    transition:transform .7s ease;
+  }
+  .color-cover:hover img{transform:scale(1.03);}
   .color-item{
     position:relative; overflow:hidden; aspect-ratio:3/4;
     background:var(--pearl-2);
   }
-  .color-item.feature{grid-column:span 2; aspect-ratio:4/3;}
   .color-item img{
     width:100%; height:100%; object-fit:cover; object-position:center 20%;
     transition:transform .65s ease;
@@ -533,10 +542,10 @@
       <h2>Colorimetría y balayage</h2>
       <p>Color pensado a medida: balayage, mechas, tonos vivos y correcciones — con la mirada de una Experta Colorista con mención en Química.</p>
     </div>
+    <div class="color-cover reveal">
+      <img src="assets/color-1.jpg" alt="Adriana Machado aplicando técnica de color con papel aluminio" loading="lazy">
+    </div>
     <div class="color-grid">
-      <div class="color-item feature reveal">
-        <img src="assets/color-1.jpg" alt="Adriana Machado aplicando técnica de color con papel aluminio" loading="lazy">
-      </div>
       <div class="color-item reveal reveal-delay-1">
         <img src="assets/color-2.jpg" alt="Color rojo con ondas voluminosas" loading="lazy">
       </div>
