@@ -260,7 +260,24 @@
   .color-item:hover img{transform:scale(1.05);}
   .color-cta{margin-top:40px; text-align:center;}
 
-  .peinados{background:var(--white);}
+  .corte{
+    background:
+      radial-gradient(ellipse 60% 40% at 0% 100%, rgba(201,169,120,.1), transparent 50%),
+      var(--white);
+  }
+  .corte-cover{
+    position:relative; overflow:hidden; aspect-ratio:16/10;
+    margin-bottom:12px; background:var(--pearl-2);
+  }
+  @media(min-width:700px){.corte-cover{aspect-ratio:21/9; margin-bottom:14px;}}
+  .corte-cover img{
+    width:100%; height:100%; object-fit:cover; object-position:center 25%;
+    transition:transform .7s ease;
+  }
+  .corte-cover:hover img{transform:scale(1.03);}
+  .corte-cta{margin-top:36px; text-align:center;}
+
+  .peinados{background:var(--pearl);}
   .peinado-grid{
     display:grid; grid-template-columns:repeat(2,1fr); gap:10px;
   }
@@ -412,6 +429,7 @@
       <a href="#sobre-mi">Sobre mí</a>
       <a href="#servicios">Servicios</a>
       <a href="#colorimetria">Colorimetría</a>
+      <a href="#corte">Corte</a>
       <a href="#peinados">Peinados</a>
       <a href="#instituto">Instituto</a>
       <a href="#galeria">El salón</a>
@@ -426,6 +444,7 @@
     <a href="#sobre-mi">Sobre mí</a>
     <a href="#servicios">Servicios</a>
     <a href="#colorimetria">Colorimetría</a>
+    <a href="#corte">Corte</a>
     <a href="#peinados">Peinados</a>
     <a href="#instituto">Instituto</a>
     <a href="#galeria">El salón</a>
@@ -499,12 +518,12 @@
           <p>Color a medida para tu tono de piel y tu estilo — mechas, balayage, tonalizantes y retoque de raíz.</p>
         </div>
       </a>
-      <a class="svc-item reveal reveal-delay-1" href="#peinados">
-        <img src="assets/servicio-corte.jpg" alt="Corte bob degradado profesional" loading="lazy">
+      <a class="svc-item reveal reveal-delay-1" href="#corte">
+        <img src="assets/servicio-corte.jpg" alt="Adriana Machado realizando un corte" loading="lazy">
         <div class="svc-copy">
           <div class="svc-num">02</div>
-          <h3>Cortes &amp; Peinados</h3>
-          <p>Cortes que enmarcan tu rostro y peinados para el día a día, hechos a tu medida.</p>
+          <h3>Corte</h3>
+          <p>Cortes que enmarcan tu rostro, hechos a tu medida y con técnica precisa.</p>
         </div>
       </a>
       <article class="svc-item reveal reveal-delay-2">
@@ -579,6 +598,22 @@
     </div>
     <div class="color-cta reveal">
       <a class="btn btn-primary" href="https://ig.me/m/adrianamachadoestilista" target="_blank" rel="noopener">Consultá por tu color</a>
+    </div>
+  </div>
+</section>
+
+<section class="corte" id="corte">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Servicio</span>
+      <h2>Corte</h2>
+      <p>Diagnóstico, técnica y forma — un corte pensado para tu rostro, tu cabello y tu día a día.</p>
+    </div>
+    <div class="corte-cover reveal">
+      <img src="assets/corte-1.jpg" alt="Adriana Machado realizando un corte profesional" loading="lazy">
+    </div>
+    <div class="corte-cta reveal">
+      <a class="btn btn-primary" href="https://ig.me/m/adrianamachadoestilista" target="_blank" rel="noopener">Reservá tu corte</a>
     </div>
   </div>
 </section>
