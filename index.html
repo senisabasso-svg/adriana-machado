@@ -322,6 +322,38 @@
   .peinado-item:hover img{transform:scale(1.05);}
   .peinado-cta{margin-top:40px; text-align:center;}
 
+  .maquillaje{
+    background:
+      radial-gradient(ellipse 70% 45% at 100% 0%, rgba(201,169,120,.12), transparent 50%),
+      var(--pearl);
+  }
+  .maquillaje-cover{
+    position:relative; overflow:hidden; aspect-ratio:16/10;
+    margin-bottom:12px; background:var(--pearl-2);
+  }
+  @media(min-width:700px){.maquillaje-cover{aspect-ratio:21/9; margin-bottom:14px;}}
+  .maquillaje-cover img{
+    width:100%; height:100%; object-fit:cover; object-position:center 30%;
+    transition:transform .7s ease;
+  }
+  .maquillaje-cover:hover img{transform:scale(1.03);}
+  .maquillaje-grid{
+    display:grid; grid-template-columns:repeat(2,1fr); gap:10px;
+  }
+  @media(min-width:700px){
+    .maquillaje-grid{grid-template-columns:repeat(4,1fr); gap:12px;}
+  }
+  .maquillaje-item{
+    position:relative; overflow:hidden; aspect-ratio:3/4;
+    background:var(--pearl-2);
+  }
+  .maquillaje-item img{
+    width:100%; height:100%; object-fit:cover; object-position:center 20%;
+    transition:transform .65s ease;
+  }
+  .maquillaje-item:hover img{transform:scale(1.05);}
+  .maquillaje-cta{margin-top:40px; text-align:center;}
+
   .novias{
     background:
       radial-gradient(ellipse 70% 45% at 0% 0%, rgba(201,169,120,.12), transparent 50%),
@@ -489,6 +521,7 @@
       <a href="#colorimetria">Colorimetría</a>
       <a href="#corte">Corte</a>
       <a href="#peinados">Peinados</a>
+      <a href="#maquillaje">Maquillaje</a>
       <a href="#novias">Novias</a>
       <a href="#instituto">Instituto</a>
       <a href="#galeria">El salón</a>
@@ -505,6 +538,7 @@
     <a href="#colorimetria">Colorimetría</a>
     <a href="#corte">Corte</a>
     <a href="#peinados">Peinados</a>
+    <a href="#maquillaje">Maquillaje</a>
     <a href="#novias">Novias</a>
     <a href="#instituto">Instituto</a>
     <a href="#galeria">El salón</a>
@@ -567,7 +601,7 @@
     <div class="section-head reveal">
       <span class="eyebrow">Servicios</span>
       <h2>Todo lo que tu cabello necesita, en un solo lugar</h2>
-      <p>Color, corte, tratamientos y peinados de fiesta — cada servicio nace de un diagnóstico real de tu cabello.</p>
+      <p>Color, corte, tratamientos, peinados y maquillaje — cada servicio nace de un diagnóstico real.</p>
     </div>
     <div class="svc-grid">
       <a class="svc-item reveal" href="#colorimetria">
@@ -594,18 +628,26 @@
           <p>Alisados orgánicos y tratamientos de brillo y nutrición para devolverle vida al cabello.</p>
         </div>
       </a>
-      <a class="svc-item reveal" href="#novias">
-        <img src="assets/portada-novias.jpg" alt="Peinado de novia con tocado de perlas" loading="lazy">
+      <a class="svc-item reveal" href="#maquillaje">
+        <img src="assets/portada-maquillaje.jpg" alt="Aplicación de labial profesional" loading="lazy">
         <div class="svc-copy">
           <div class="svc-num">04</div>
+          <h3>Maquillaje</h3>
+          <p>Maquillaje social y de evento, pensado para realzar tu look y acompañar tu peinado.</p>
+        </div>
+      </a>
+      <a class="svc-item reveal reveal-delay-1" href="#novias">
+        <img src="assets/portada-novias.jpg" alt="Peinado de novia con tocado de perlas" loading="lazy">
+        <div class="svc-copy">
+          <div class="svc-num">05</div>
           <h3>Novias y quinceañeras</h3>
           <p>Peinados para tu gran día, con prueba previa incluida, para llegar sin sorpresas.</p>
         </div>
       </a>
-      <article class="svc-item reveal reveal-delay-1">
+      <article class="svc-item reveal reveal-delay-2">
         <img src="assets/servicio-instituto.jpg" alt="Taller de formación en el instituto" loading="lazy">
         <div class="svc-copy">
-          <div class="svc-num">05</div>
+          <div class="svc-num">06</div>
           <h3>Instituto de Formación</h3>
           <p>Cursos de colorimetría y estilismo dictados por Adriana, para quienes quieren vivir de esto.</p>
         </div>
@@ -735,6 +777,31 @@
     </div>
     <div class="peinado-cta reveal">
       <a class="btn btn-primary" href="https://ig.me/m/adrianamachadoestilista" target="_blank" rel="noopener">Reservá tu peinado</a>
+    </div>
+  </div>
+</section>
+
+<section class="maquillaje" id="maquillaje">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Belleza</span>
+      <h2>Maquillaje</h2>
+      <p>Maquillaje social y de evento — piel luminosa, ojos definidos y un acabado que dura toda la noche.</p>
+    </div>
+    <div class="maquillaje-cover reveal">
+      <img src="assets/portada-maquillaje.jpg" alt="Aplicación de labial profesional en el salón" loading="lazy">
+    </div>
+    <div class="maquillaje-grid">
+      <div class="maquillaje-item reveal reveal-delay-1"><img src="assets/maquillaje-1.jpg" alt="Aplicación de polvo con brocha" loading="lazy"></div>
+      <div class="maquillaje-item reveal reveal-delay-2"><img src="assets/maquillaje-2.jpg" alt="Maquillaje con peinado recogido y tocado" loading="lazy"></div>
+      <div class="maquillaje-item reveal"><img src="assets/maquillaje-3.jpg" alt="Perfilado de labios profesional" loading="lazy"></div>
+      <div class="maquillaje-item reveal reveal-delay-1"><img src="assets/maquillaje-4.jpg" alt="Aplicación de máscara de pestañas" loading="lazy"></div>
+      <div class="maquillaje-item reveal reveal-delay-2"><img src="assets/maquillaje-5.jpg" alt="Maquillaje de labios para evento" loading="lazy"></div>
+      <div class="maquillaje-item reveal"><img src="assets/maquillaje-6.jpg" alt="Sesión de maquillaje en el salón" loading="lazy"></div>
+      <div class="maquillaje-item reveal reveal-delay-1"><img src="assets/maquillaje-7.jpg" alt="Labial rojo en preparación de evento" loading="lazy"></div>
+    </div>
+    <div class="maquillaje-cta reveal">
+      <a class="btn btn-primary" href="https://ig.me/m/adrianamachadoestilista" target="_blank" rel="noopener">Reservá tu maquillaje</a>
     </div>
   </div>
 </section>
